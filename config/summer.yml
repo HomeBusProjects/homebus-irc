@@ -1,0 +1,4 @@
+use_ssl: true
+nick: homebus-irc-bot
+channel: '#homebus-test'
+auto_rejoin: true
