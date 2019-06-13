@@ -37,10 +37,13 @@ class IRCHomeBusApp < HomeBusApp
     obj = {
       id: @uuid,
       timestamp: Time.now.to_i,
-      server: @options[:irc_server],
-      channel: channel,
-      sender: sender,
-      message: message
+      message: {
+        server: 'irc.freenode.net',
+        channel: channel,
+        nick: sender["nick"],
+        hostname: sender["hostname"],
+        message: message
+      }
     }
 
     # messages look like "FIRSTNAME INITIAL. has opened unit3 back door"
