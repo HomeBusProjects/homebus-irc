@@ -40,8 +40,8 @@ class IRCHomeBusApp < HomeBusApp
       message: {
         server: 'irc.freenode.net',
         channel: channel,
-        nick: sender["nick"],
-        hostname: sender["hostname"],
+        nick: sender[:nick],
+        hostname: sender[:hostname],
         message: message
       }
     }
